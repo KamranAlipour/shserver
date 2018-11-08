@@ -1,0 +1,3 @@
+The project is set to connect to a RICOH Theta S camera through Wifi and recieve frames from it as a source of environment lighting.
+So to be able to run it you'd need a wifi connection on the system running this project.
+The project computes spherical harmonic coefficients of the environment view frame and pushes the results to a HTTP port, which can be picked up by whatever rendering device connected to the network.

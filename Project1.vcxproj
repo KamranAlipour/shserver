@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E9746BD8-247B-4061-8C9C-DF64975BFF07}</ProjectGuid>
+    <RootNamespace>Project1</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>Spherical Harmonics Server</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86;</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_MBCS;_CRT_SECURE_NO_WARNINGS;_ITERATOR_DEBUG_LEVEL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Libs\opencv\include;C:\Libs\opencv\modules\core\include;C:\Libs\opencv\modules\highgui\include;C:\Libs\opencv\modules\videoio\include;C:\Libs\opencv\modules\imgproc\include;C:\Libs\opencv\modules\calib3d\include;C:\Libs\opencv\modules\features2d\include;C:\Libs\opencv\build\;C:\Libs\opencv\modules\flann\include;C:\Libs\opencv\modules\imgcodecs\include;C:\Libs\poco-develop\poco-develop\Net\include;C:\Libs\poco-develop\poco-develop\NetSSL_OpenSSL\include;C:\Libs\poco-develop\poco-develop\Foundation\include;C:\Libs\poco-develop\poco-develop\Crypto\include;C:\Libs\poco-develop\poco-develop\Util\include;C:\Libs\poco-develop\poco-develop\JSON\include;C:\Libs\poco-develop\poco-develop\openssl\VS_140\include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Libs\opencv\build\lib\Debug;C:\Libs\poco-develop\poco-develop\build\lib\Debug</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_core340d.lib;opencv_highgui340d.lib;opencv_videoio340d.lib;opencv_imgproc340d.lib;opencv_imgcodecs340d.lib;PocoFoundationd.lib;PocoNetd.lib;PocoNetSSLd.lib;PocoCryptod.lib;PocoUtild.lib;PocoXMLd.lib;PocoJSONd.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Libs\opencv\include;C:\Libs\opencv\modules\core\include;C:\Libs\opencv\modules\highgui\include;C:\Libs\opencv\modules\videoio\include;C:\Libs\opencv\modules\imgproc\include;C:\Libs\opencv\modules\calib3d\include;C:\Libs\opencv\modules\features2d\include;C:\Libs\opencv\build\;C:\Libs\opencv\modules\flann\include;C:\Libs\opencv\modules\imgcodecs\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opencv_core340d.lib;opencv_highgui340d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Libs\opencv\build\lib\Debug</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Libs\opencv\include;C:\Libs\opencv\modules\core\include;C:\Libs\opencv\modules\highgui\include;C:\Libs\opencv\modules\videoio\include;C:\Libs\opencv\modules\imgproc\include;C:\Libs\opencv\modules\calib3d\include;C:\Libs\opencv\modules\features2d\include;C:\Libs\opencv\build\;C:\Libs\opencv\modules\flann\include;C:\Libs\opencv\modules\imgcodecs\include;C:\Libs\poco-develop\poco-develop\Net\include;C:\Libs\poco-develop\poco-develop\NetSSL_OpenSSL\include;C:\Libs\poco-develop\poco-develop\Foundation\include;C:\Libs\poco-develop\poco-develop\Crypto\include;C:\Libs\poco-develop\poco-develop\Util\include;C:\Libs\poco-develop\poco-develop\openssl\VS_140\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;_CRT_SECURE_NO_WARNINGS;_ITERATOR_DEBUG_LEVEL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\Libs\opencv\build\lib\Release;C:\Libs\poco-develop\poco-develop\build\lib\Release</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_core340.lib;opencv_highgui340.lib;opencv_videoio340.lib;opencv_imgproc340.lib;opencv_imgcodecs340.lib;PocoFoundation.lib;PocoNetSSL.lib;PocoCrypto.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Libs\boost_1_66_0;C:\Libs\opencv\include;C:\Libs\opencv\modules\core\include;C:\Libs\opencv\modules\highgui\include;C:\Libs\opencv\modules\videoio\include;C:\Libs\opencv\modules\imgproc\include;C:\Libs\opencv\modules\calib3d\include;C:\Libs\opencv\modules\features2d\include;C:\Libs\opencv\build\;C:\Libs\opencv\modules\flann\include;C:\Libs\opencv\modules\imgcodecs\include;C:\Libs\poco-develop\poco-develop\Net\include;C:\Libs\poco-develop\poco-develop\NetSSL_OpenSSL\include;C:\Libs\poco-develop\poco-develop\Foundation\include;C:\Libs\poco-develop\poco-develop\Crypto\include;C:\Libs\poco-develop\poco-develop\Util\include;C:\Libs\poco-develop\poco-develop\openssl\VS_140\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;_CRT_SECURE_NO_WARNINGS;_ITERATOR_DEBUG_LEVEL=0;D_WIN32_WINNT=0x0A00;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\Libs\opencv\build64\lib\Release;C:\Libs\poco-develop\poco-develop\build64\lib\Release;C:\Libs\boost_1_66_0\stage\lib;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_core340.lib;opencv_highgui340.lib;opencv_videoio340.lib;opencv_imgproc340.lib;opencv_imgcodecs340.lib;PocoFoundation.lib;PocoNetSSL.lib;PocoCrypto.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="http_example.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="client_http.hpp" />
+    <ClInclude Include="openCVlibs.h" />
+    <ClInclude Include="server_http.hpp" />
+    <ClInclude Include="SphericalHarmonics.h" />
+    <ClInclude Include="status_code.hpp" />
+    <ClInclude Include="ThetaWifiStream.h" />
+    <ClInclude Include="utility.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
